@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use('/api/user',userRouter);
 app.use('/api/auth',authRouter);
 app.use('/api/listing',listingRouter);
-// app.use(express.static(path.join(_dirname, '/client/dist')))
+app.use(express.static(path.join(_dirname, '/client/dist')))
 //handling any other routes that are not found in the above middlewares
 app.get('*', (req,res)=> {
    res.sendFile(path.join(_dirname ,"client","dist","index.html"))
