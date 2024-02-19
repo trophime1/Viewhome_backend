@@ -19,7 +19,7 @@ const app =express();
 const _dirname =path.resolve()
 app.use(express.json())
 app.use(cookieParser());
-app.use(cors({origin:"https://www.viewhomebase.com"}));
+app.use(cors({origin:"*"}));
 
  app.listen(3000, ()=> {
     console.log('server is running on port 3000!!!')
