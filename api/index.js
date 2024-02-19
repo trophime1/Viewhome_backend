@@ -32,13 +32,13 @@ app.use('/api/listing',listingRouter);
 // app.get('*', (req,res)=> {
 //    res.sendFile(path.join(_dirname ,"client","dist","index.html"))
 //    });
-const cors = require('cors');
-const corsOptions ={
-    origin:'http://localhost:5173', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+// const cors = require('cors');
+// const corsOptions ={
+//     origin:'http://localhost:5173', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+// app.use(cors(corsOptions));
 
 app.use((err,req,res,next)=>{
    const statusCode = err.statusCode || 500;
